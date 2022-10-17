@@ -19,4 +19,7 @@ def get_hacker_new():
     else:
         title = "0 points"
 
+    author_ = first.find_next_sibling('tr').find('a', class_ = 'hnuser').text
+    rank_ = first.find('span', class_ = 'rank').text.split('.')[0]
+
 get_hacker_new()
